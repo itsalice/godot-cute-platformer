@@ -568,7 +568,7 @@ scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_76cdn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -160)
+position = Vector2(-48, 40)
 limit_left = -10
 limit_bottom = 1100
 

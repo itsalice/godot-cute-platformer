@@ -92,14 +92,13 @@ func _physics_process(_delta):
 		attack()
 		var nut = nut_scene.instantiate()
 		nut.player = self
+		nut.get_node("Sprite2D").scale = Vector2(.25, .25)
 		nut.position = self.position + Vector2(64, 0)
 		nut.direction = Vector2(player_direction, 0)
 		get_parent().add_child(nut)
 	
 	# Gets hit
 	var enemy = get_parent().get_tree().get_nodes_in_group("enemies")
-	# Restart when dead or fall into restart zone
-	var restart = get_parent().get_tree().get_nodes_in_group("restartZones")
 	
 	for j in get_slide_collision_count():
 		var collision = get_slide_collision(j)

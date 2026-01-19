@@ -9,7 +9,7 @@ radius = 150.0
 [node name="Nut" type="Area2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_0x5f8")
-speed = 1500
+speed = 600
 damage = 25
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
