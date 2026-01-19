@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce0c3dyr1qhln"]
+
+[ext_resource type="Script" path="res://scripts/nut.gd" id="1_0x5f8"]
+[ext_resource type="Texture2D" uid="uid://duh5wi8noke2n" path="res://assets/textures/throwables/Chestnut.png" id="1_t6cm6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u7nxq"]
+radius = 150.0
+
+[node name="Nut" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_0x5f8")
+speed = 1500
+damage = 25
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_t6cm6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 101)
+shape = SubResource("CircleShape2D_u7nxq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
